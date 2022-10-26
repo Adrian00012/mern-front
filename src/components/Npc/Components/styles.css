@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&amp;display=swap);
+.lista{
+  background-color: red;
+}
+.cardListisNpc{
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+}
+.cardNPC{
+  border: 1px solid black;
+  width: 10%;
+  height: 10%;
+  background-color: azure;
+}

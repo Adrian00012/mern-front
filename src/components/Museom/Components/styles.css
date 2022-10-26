@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&amp;display=swap);
+.LIST {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 10%;
+}
+.TarjetaF {
+  background-color: aqua;
+  height: 300px;
+  width: 350px;
+  margin-top: 2%;
+  border-radius: 24%;
+}
+.TarjetaF button {
+  display: block;
+  background-color: transparent;
+  width: 90%;
+  height: 90%;
+  border: none;
+  box-shadow: none;
+  border-radius: 24%;
+  margin: 0;
+}
+.Tarjeta p {
+  font-family: "Nunito";
+  font-size: 1.5em;
+  font-weight: bold;
+}

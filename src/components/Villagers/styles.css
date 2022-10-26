@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&amp;display=swap);
+.lista{
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+.cardListis{
+  display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+padding: 2%;
+  gap: 2%;
+ 
+}
+.card{
+  border-radius: 30%;
+  background-color: burlywood;
+  margin-top: 5%;
+}
+.card a{
+  text-decoration: none;
+  display: block;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  align-items: center;
+}
