@@ -1,32 +1,46 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&amp;display=swap);
-.Tarjeta{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.TarjetaDetalles{
   background-color: aqua;
   height: 300px;
   width: 350px;
   padding: 3%;
  margin-left: 45%;
  border-radius: 24%;
-}
-.Tarjeta p{
-  font-family: 'Nunito';
+ font-family: 'Nunito';
   font-size: 1.5em;
   font-weight: bold;
+
 }
-.TarjertaDetalles{
+/* .TarjertaDetalles{
   font-family: 'Nunito';
   font-size: 1.5em;
   font-weight: bold;
   display: flex;
   flex-direction: column;
-}
+} */
 .TarjertaDetalles img{
   width: 10%;
 }
 .TarjertaDetalles label{
   display: flex;
   
+}
+.card{
+  width: 20rem;
+}
+.card-img{
+  
+}
+.card-header{
+  background-color: rgb(243 243 243 / 47%);
+  border-color: transparent;
+}
+.CardDetailsV{
+  display: flex;
+  justify-content: center;
+  font-family: 'Nunito';
+  font-size: 1.5em;
+  font-weight: bold;
+  background-image:url("https://i.postimg.cc/zB3Rdsmy/NSwitch-Animal-Crossing-New-Horizons-bg-villager.jpg");
+
 }

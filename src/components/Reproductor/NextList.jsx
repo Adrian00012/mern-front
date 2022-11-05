@@ -5,12 +5,10 @@ import { memo } from "react";
     // console.log(a)
   return (
     <div  className="Next">
-        <p>Next</p>
         {a.map(p=>(
-            <div className="NextItem" onClick={()=>(props.select(p))}>
-                <img src={p.image_uri}></img>
-                <p>{p.name.nameEUes}</p>
-            </div>
+            
+                <img src={p.image_uri} onClick={()=>(props.select(p))}></img>
+          
         ))}
     </div>
   )

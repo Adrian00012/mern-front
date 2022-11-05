@@ -1,0 +1,32 @@
+.CardContenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10%;
+    background-image: url("https://i.postimg.cc/jd1FD0TZ/NSwitch-Animal-Crossing-New-Horizons-bg-grass.jpg");
+    animation: fondo 100s infinite linear;
+}
+.Card-Items{
+    margin: 2%;
+}
+.btn-group{
+    background-color: transparent;
+}
+
+.btn img{
+    max-width: 30%;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;
+}
+@keyframes fondo   {
+    from {
+      background-position: center left;
+    }
+    to {
+      background-position: center right;
+    }
+  }

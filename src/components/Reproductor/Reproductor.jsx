@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import Player from "./Player";
 import {getRecords } from "./Services/funciones"
+import Spinner from 'react-bootstrap/Spinner';
  function Reproductor() {
     const [records, setRecords] = useState(null);
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -21,14 +22,14 @@ import {getRecords } from "./Services/funciones"
 
     return (
         <>
-        {records!=null?(<div>Reproductor   
+        {records!=null?(<div className="Reproductor">   
       <Player
         currentSongIndex={currentSongIndex}
         setCurrentSongIndex={setCurrentSongIndex}
         nextSongIndex={nextSongIndex}
         songs={records}
       ></Player>
-   </div>):("no hay nada")}
+   </div>):(<Spinner animation="border" variant="primary" />)}
         </>
       
        )

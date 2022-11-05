@@ -11,7 +11,11 @@ function Lista(props) {
           // <p>{p.name}</p>
 
           <div className="cardNPC">
+           <Link to={`/detalles/${p._id}`}>
             <img src={p.iconImage}></img>
+              <p>{p.translations.eUes}</p>
+              
+            </Link>
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 Days
@@ -41,10 +45,6 @@ function Lista(props) {
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            
-            <Link to={`/detalles/${p._id}`}>
-              <p>{p.translations.eUes}</p>
-            </Link>
           </div>
         ))}
       </div>
@@ -53,7 +53,7 @@ function Lista(props) {
 
   return (
     <div className="lista">
-      lista
+    
       {ver()}
     </div>
   );

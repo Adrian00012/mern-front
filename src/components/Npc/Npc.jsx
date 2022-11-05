@@ -28,8 +28,8 @@ export default function Npc() {
   return (
     <>
       {npcs != null ? (
-        <div>
-          Npc
+        <div className="rest">
+         
           <Lista npc={npcs} add={addToCArt} />
           <Days aDays={day} npc={Card}  remove={removeToCart}/>
         </div>

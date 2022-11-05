@@ -22,8 +22,8 @@ function BasicSelect(props) {
   
 
   return (
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
+    <Box sx={{ minWidth: 120 }} className="Box">
+      <FormControl fullWidth  className="SelectV">
         <InputLabel id="demo-simple-select-label">Especies</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -32,44 +32,42 @@ function BasicSelect(props) {
           label="Seleccione la especies del aldeano"
           onChange={handleChange}
           onClick={handleClick}
+         
         >
           <MenuItem value={""}>Todos</MenuItem>
           <MenuItem value={"Cat"}>Gato</MenuItem>
           <MenuItem value={"Gorilla"}>Gorila</MenuItem>
-          <MenuItem value={"Squirrel"}>Squirrel</MenuItem>
-          <MenuItem value={"Anteater"}>Anteater</MenuItem>
-          <MenuItem value={"Eagle"}>Eagle</MenuItem>
-          <MenuItem value={"Bear cub"}>Bear cub</MenuItem>
-          <MenuItem value={"Bird"}>Bird</MenuItem>
-          <MenuItem value={"Bear"}>Bear</MenuItem>
-          <MenuItem value={"Penguin"}>Penguin</MenuItem>
-          <MenuItem value={"Chicken"}>Chicken</MenuItem>
-          <MenuItem value={"Mouse"}>Mouse</MenuItem>
-          <MenuItem value={"Hippo"}>Hippo</MenuItem>
-          <MenuItem value={"Tiger"}>Tiger</MenuItem>
-          <MenuItem value={"Elephant"}>Elephant</MenuItem>
-          <MenuItem value={"Alligator"}>Alligator</MenuItem>
-          <MenuItem value={"Pig"}>Pig</MenuItem>
-          <MenuItem value={"Kangaroo"}>Kangaroo</MenuItem>
-          <MenuItem value={"Horse"}>Horse</MenuItem>
+          <MenuItem value={"Squirrel"}>Ardilla</MenuItem>
+          <MenuItem value={"Anteater"}>Oso Hormiguero</MenuItem>
+          <MenuItem value={"Eagle"}>Aguila</MenuItem>
+          <MenuItem value={"Bear cub"}>Osito</MenuItem>
+          <MenuItem value={"Bird"}>Pajaro</MenuItem>
+          <MenuItem value={"Bear"}>Oso</MenuItem>
+          <MenuItem value={"Penguin"}>Pinguino</MenuItem>
+          <MenuItem value={"Chicken"}>Gallina</MenuItem>
+          <MenuItem value={"Mouse"}>Raton</MenuItem>
+          <MenuItem value={"Hippo"}>Hipotamo</MenuItem>
+          <MenuItem value={"Tiger"}>Tigre</MenuItem>
+          <MenuItem value={"Elephant"}>Elefante</MenuItem>
+          <MenuItem value={"Alligator"}>Cocodrilo</MenuItem>
+          <MenuItem value={"Pig"}>Cerdo</MenuItem>
+          <MenuItem value={"Kangaroo"}>Canguro</MenuItem>
+          <MenuItem value={"Horse"}>Caballo</MenuItem>
           <MenuItem value={"Hamster"}>Hamster</MenuItem>
-          <MenuItem value={"Lion"}>Lion</MenuItem>
-          <MenuItem value={"Ostrich"}>Ostrich</MenuItem>
-          <MenuItem value={"Dog"}>Dog</MenuItem>
-          <MenuItem value={"Sheep"}>Sheep</MenuItem>
-          <MenuItem value={"Wolf"}>Wolf</MenuItem>
-          <MenuItem value={"Frog"}>Frog</MenuItem>
-          <MenuItem value={"Monkey"}>Monkey</MenuItem>
+          <MenuItem value={"Lion"}>Leon</MenuItem>
+          <MenuItem value={"Ostrich"}>Avestruz</MenuItem>
+          <MenuItem value={"Dog"}>Perro</MenuItem>
+          <MenuItem value={"Sheep"}>Oveja</MenuItem>
+          <MenuItem value={"Wolf"}>Lobo</MenuItem>
+          <MenuItem value={"Frog"}>Rana</MenuItem>
+          <MenuItem value={"Monkey"}>Mono</MenuItem>
           <MenuItem value={"Koala"}>Koala</MenuItem>
-          <MenuItem value={"Bull"}>Bull</MenuItem>
-          <MenuItem value={"Rhinoceros"}>Rhinoceros</MenuItem>
-          <MenuItem value={"Deer"}>Deer</MenuItem>
-          <MenuItem value={"Goat"}>Goat</MenuItem>
-          <MenuItem value={"Duck"}>Duck</MenuItem>
-          <MenuItem value={"Octopus"}>Octopus</MenuItem>
-          <MenuItem value={"Ostrich"}>Ostrich</MenuItem>
-         
-
+          <MenuItem value={"Bull"}>Toro</MenuItem>
+          <MenuItem value={"Rhinoceros"}>Rinoceronte</MenuItem>
+          <MenuItem value={"Deer"}>Ciervo</MenuItem>
+          <MenuItem value={"Goat"}>Cabra</MenuItem>
+          <MenuItem value={"Duck"}>Pato</MenuItem>
+          <MenuItem value={"Octopus"}>Pulpo</MenuItem>
         </Select>
       </FormControl>
     </Box>

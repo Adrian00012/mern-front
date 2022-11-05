@@ -1,8 +1,18 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&amp;display=swap);
-.lista{
+.Villagers,.DetallesV{
+  animation: fondo 100s infinite linear;
+  background-image:url("https://i.postimg.cc/zB3Rdsmy/NSwitch-Animal-Crossing-New-Horizons-bg-villager.jpg");
+}
+@keyframes fondo   {
+  from {
+    background-position: center left;
+  }
+  to {
+    background-position: center right;
+  }}
+.listaV{
   height: 100%;
   width: 100%;
-  background-color: red;
   display: flex;
   flex-direction: column;
 }
@@ -12,14 +22,15 @@
  flex-wrap: wrap;
 padding: 2%;
   gap: 2%;
+  justify-content: center
  
 }
-.card{
+.cardV{
   border-radius: 30%;
-  background-color: burlywood;
+  background-color: #77767469;;
   margin-top: 5%;
 }
-.card a{
+.cardV a{
   text-decoration: none;
   display: block;
   color: white;

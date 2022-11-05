@@ -12,26 +12,29 @@ function Days(props) {
  
   return (
     <>
-      <div>
+      <div >
+      <h1>Npc que te han visitado</h1>
         <table class="default">
+          
           <tr>
             {props.aDays.map((days) => (
               <th>{days}</th>
             ))}
           </tr>
           <tr>
-            <td>{Lunes.length > 0 ? <img src={Lunes[0][1]} /> : <img />}</td>
-            <td>{Martes.length > 0 ? <img src={Martes[0][1]} /> : <img />}</td>
-            <td>
+            <td >{Lunes.length > 0 ? <img src={Lunes[0][1]} /> : <img />}</td>
+            <td >{Martes.length > 0 ? <img src={Martes[0][1]} /> : <img />}</td>
+            <td >
               {Miercoles.length > 0 ? <img src={Miercoles[0][1]} /> : <img />}
             </td>
-            <td>{Jueves.length > 0 ? <img src={Jueves[0][1]} /> : <img />}</td>
-            <td>{Viernes.length > 0 ? <img src={Viernes[0][1]} /> : <img />}</td>
-            <td>{Sabado.length > 0 ? <img src={Sabado[0][1]} /> : <img />}</td>
-            <td>{Domingo.length > 0 ? <img src={Domingo[0][1]} /> : <img />}</td>
+            <td >{Jueves.length > 0 ? <img src={Jueves[0][1]} /> : <img />}</td>
+            <td >{Viernes.length > 0 ? <img src={Viernes[0][1]} /> : <img />}</td>
+            <td  >{Sabado.length > 0 ? <img src={Sabado[0][1]} /> : <img />}</td>
+            <td >{Domingo.length > 0 ? <img src={Domingo[0][1]} /> : <img />}</td>
           </tr>
+          <caption><button onClick={props.remove} disabled={props.npc.length>0?false:true}>Resetear semana</button></caption>
         </table>
-        <button onClick={props.remove}>Resetear semana</button>
+        
       </div>
     </>
   );

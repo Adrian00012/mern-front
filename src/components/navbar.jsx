@@ -25,14 +25,12 @@ export default function Navbars() {
               Music
             </NavLink>
             <NavLink className="nav-link" to="/Villagers">
-              Villagers
+              Aldeanos
             </NavLink>
             <NavLink className="nav-link" to="/Npc">
               Npc
             </NavLink>
-            <NavLink className="nav-link" to="/Items">
-              Items
-            </NavLink>
+           
             <NavDropdown title="Museom" id="basic-nav-dropdown">
               <NavDropdown.Item>
                 <NavLink className="nav-link" to="/Fosiles">
@@ -41,25 +39,28 @@ export default function Navbars() {
               </NavDropdown.Item>
               <NavDropdown.Item>
                 <NavLink className="nav-link" to="/Fish">
-                  Fish
+                  Peces
                 </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Item>
                 <NavLink className="nav-link" to="/Bugs">
-                  Bugs
+                  Bichos
                 </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Item>
                 <NavLink className="nav-link" to="/SeaCreatures">
-                  Sea Creatures
+                  Criaturas Marinas
                 </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Item>
                 <NavLink className="nav-link" to="/Artwork">
-                  Artwork
+                  Arte
                 </NavLink>
               </NavDropdown.Item>
             </NavDropdown>
+            <NavLink className="nav-link" to="/Items">
+              Items
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

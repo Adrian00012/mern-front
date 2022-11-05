@@ -1,21 +1,11 @@
 import React, { Component, useState, useRef, useEffect } from "react";
-import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
+import Alert from 'react-bootstrap/Alert';
+import Modal from "react-bootstrap/Modal";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./styles.css";
-import Button from 'react-bootstrap/Button';
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 1000,
-  bgcolor: "background.paper",
-  boxShadow: 24,
-  p: 4,
-};
+import Button from "react-bootstrap/Button";
+
 const Tarjeta = (props) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -29,7 +19,7 @@ const Tarjeta = (props) => {
           ) : (
             <img></img>
           )}
-          <button onClick={handleOpen}>
+          <button onClick={() => setOpen(true)} className="ButtonModal">
             {" "}
             <img src={props.iconImage}></img>
           </button>
@@ -37,33 +27,35 @@ const Tarjeta = (props) => {
            <p>{props.Nombre}</p>  */}
 
           <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            open={open}
-            onClose={handleClose}
-            closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-              timeout: 500,
-            }}
+            show={open}
+            onHide={() => setOpen(false)}
+            dialogClassName="modal-90w"
+            aria-labelledby="example-custom-modal-styling-title"
           >
-            <Fade in={open}>
-              <Box sx={style}>
-              <h1>{props.Nombre}</h1>
-                <img src={props.iconImage}></img>
-                <p>Precio: {props.produ.sell} <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img></p>
-                <p>Obtencion: {props.produ.source}</p>
-                <p>Descripcion: <span>{props.produ.description}</span></p>
-                <button onClick={() => props.add(props.produ)}>Add</button>
-                <button onClick={() => props.remove(props.produ)}>
-                  Borrar
-                </button>
-              </Box>
-            </Fade>
+            <Modal.Header closeButton>
+              <Modal.Title id="example-custom-modal-styling-title">
+                <h1>{props.Nombre}</h1>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <img src={props.iconImage}></img>
+              <p>
+                Precio: {props.produ.sell}{" "}
+                <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img>
+              </p>
+              <p>Obtencion: {props.produ.source}</p>
+              <p>
+                Descripcion: <span>{props.produ.description}</span>
+              </p>
+              <ButtonGroup>
+              <Button onClick={() => props.add(props.produ)} variant="secondary">Add</Button>
+              <Button onClick={() => props.remove(props.produ)} variant="secondary">Borrar</Button>
+              </ButtonGroup>
+            </Modal.Body>
           </Modal>
         </div>
       );
-     
+
     case "Fish":
       return (
         <div className="TarjetaF">
@@ -72,7 +64,7 @@ const Tarjeta = (props) => {
           ) : (
             <img></img>
           )}
-          <button onClick={handleOpen}>
+          <button onClick={handleOpen} className="ButtonModal">
             {" "}
             <img src={props.iconImage}></img>
           </button>
@@ -80,29 +72,31 @@ const Tarjeta = (props) => {
            <p>{props.Nombre}</p>  */}
 
           <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            open={open}
-            onClose={handleClose}
-            closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-              timeout: 500,
-            }}
+            show={open}
+            onHide={() => setOpen(false)}
+            dialogClassName="modal-90w"
+            aria-labelledby="example-custom-modal-styling-title"
           >
-            <Fade in={open}>
-              <Box sx={style}>
+            <Modal.Header closeButton>
+              <Modal.Title id="example-custom-modal-styling-title">
                 <h1>{props.Nombre}</h1>
-                <img src={props.produ.critterpediaImage}></img>
-                <p>Precio: {props.produ.sell} <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img></p>
-                <p>Obtencion: {props.produ.whereHow}</p>
-                <p>Descripcion: <span>{props.produ.description}</span></p>
-                <button onClick={() => props.add(props.produ)}>Add</button>
-                <button onClick={() => props.remove(props.produ)}>
-                  Borrar
-                </button>
-              </Box>
-            </Fade>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <img src={props.produ.critterpediaImage}></img>
+              <p>
+                Precio: {props.produ.sell}{" "}
+                <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img>
+              </p>
+              <p>Obtencion: {props.produ.whereHow}</p>
+              <p>
+                Descripcion: <span>{props.produ.description}</span>
+              </p>
+              <ButtonGroup>
+              <Button onClick={() => props.add(props.produ)} variant="secondary">Add</Button>
+              <Button onClick={() => props.remove(props.produ)} variant="secondary">Borrar</Button>
+              </ButtonGroup>
+            </Modal.Body>
           </Modal>
         </div>
       );
@@ -114,7 +108,7 @@ const Tarjeta = (props) => {
           ) : (
             <img></img>
           )}
-          <button onClick={handleOpen}>
+          <button onClick={handleOpen} className="ButtonModal">
             {" "}
             <img src={props.iconImage}></img>
           </button>
@@ -122,116 +116,133 @@ const Tarjeta = (props) => {
              <p>{props.Nombre}</p>  */}
 
           <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            open={open}
-            onClose={handleClose}
-            closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-              timeout: 500,
-            }}
+            show={open}
+            onHide={() => setOpen(false)}
+            dialogClassName="modal-90w"
+            aria-labelledby="example-custom-modal-styling-title"
           >
-            <Fade in={open}>
-              <Box sx={style}>
-                <p>{props.Nombre}</p>
-                <img src={props.produ.critterpediaImage}></img>
-                <p>Precio: {props.produ.sell} <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img></p>
-                <p>Obtencion: {props.produ.whereHow}</p>
-                <p>Descripcion: <span>{props.produ.description}</span></p>
-                <button onClick={() => props.add(props.produ)}>Add</button>
-                <button onClick={() => props.remove(props.produ)}>
-                  Borrar
-                </button>
-              </Box>
-            </Fade>
+            <Modal.Header closeButton>
+              <Modal.Title id="example-custom-modal-styling-title">
+                <h1>{props.Nombre}</h1>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              {" "}
+              <img src={props.produ.critterpediaImage}></img>
+              <p>
+                Precio: {props.produ.sell}{" "}
+                <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img>
+              </p>
+              <p>Obtencion: {props.produ.whereHow}</p>
+              <p>
+                Descripcion: <span>{props.produ.description}</span>
+              </p>
+              <ButtonGroup>
+              <Button onClick={() => props.add(props.produ)} variant="secondary">Add</Button>
+              <Button onClick={() => props.remove(props.produ)} variant="secondary">Borrar</Button>
+              </ButtonGroup>
+            </Modal.Body>
           </Modal>
         </div>
       );
-      case "SeaCreatures":
-        return (
-          <div className="TarjetaF">
-            {props.checked === true ? (
-              <img src="https://i.postimg.cc/527Z1RWx/Museum-NH-Map-Icon-Small.png"></img>
-            ) : (
-              <img></img>
-            )}
-            <button onClick={handleOpen}>
-              {" "}
-              <img src={props.iconImage}></img>
-            </button>
-            {/* <img src={props.iconImage}></img>
+    case "SeaCreatures":
+      return (
+        <div className="TarjetaF">
+          {props.checked === true ? (
+            <img src="https://i.postimg.cc/527Z1RWx/Museum-NH-Map-Icon-Small.png"></img>
+          ) : (
+            <img></img>
+          )}
+          <button onClick={handleOpen} className="ButtonModal">
+            {" "}
+            <img src={props.iconImage}></img>
+          </button>
+          {/* <img src={props.iconImage}></img>
                <p>{props.Nombre}</p>  */}
-  
-            <Modal
-              aria-labelledby="transition-modal-title"
-              aria-describedby="transition-modal-description"
-              open={open}
-              onClose={handleClose}
-              closeAfterTransition
-              BackdropComponent={Backdrop}
-              BackdropProps={{
-                timeout: 500,
-              }}
-            >
-              <Fade in={open}>
-                <Box sx={style}>
-                  <h1>{props.Nombre}</h1>
-                  <img src={props.produ.critterpediaImage}></img>
-                <p>Precio: {props.produ.sell} <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img></p>
-                {/* <p>Obtencion: {props.produ.whereHow}</p> */}
-                <p>Descripcion: <span>{props.produ.description}</span></p>
-                  <button onClick={() => props.add(props.produ)}>Add</button>
-                  <button onClick={() => props.remove(props.produ)}>
-                    Borrar
-                  </button>
-                </Box>
-              </Fade>
-            </Modal>
-          </div>
-        );
-        case "Artwork":
-          return (
-            <div className="TarjetaF">
-              
-              {props.checked === true ? (
-                <img src="https://i.postimg.cc/527Z1RWx/Museum-NH-Map-Icon-Small.png"></img>
-              ) : (
-                <img></img>
-              )}
-              <button onClick={handleOpen}>
-                {" "}
-                <img src={props.iconImage}></img>
-              </button>
-              {/* <img src={props.iconImage}></img>
+
+          <Modal
+            show={open}
+            onHide={() => setOpen(false)}
+            dialogClassName="modal-90w"
+            aria-labelledby="example-custom-modal-styling-title"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="example-custom-modal-styling-title">
+                <h1>{props.Nombre}</h1>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <img src={props.produ.critterpediaImage}></img>
+              <p>
+                Precio: {props.produ.sell}{" "}
+                <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img>
+              </p>
+              {/* <p>Obtencion: {props.produ.whereHow}</p> */}
+              <p>
+                Descripcion: <span>{props.produ.description}</span>
+              </p>
+              <ButtonGroup>
+              <Button onClick={() => props.add(props.produ)} variant="secondary">Add</Button>
+              <Button onClick={() => props.remove(props.produ)} variant="secondary">Borrar</Button>
+              </ButtonGroup>
+            </Modal.Body>
+          </Modal>
+        </div>
+      );
+    case "Artwork":
+      return (
+        <div className="TarjetaF" >
+          {props.checked === true ? (
+            <img src="https://i.postimg.cc/527Z1RWx/Museum-NH-Map-Icon-Small.png"></img>
+          ) : (
+            <img></img>
+          )}
+          <button onClick={handleOpen} className="ButtonModal">
+            {" "}
+            <img src={props.iconImage}></img>
+          </button>
+          {/* <img src={props.iconImage}></img>
                  <p>{props.Nombre}</p>  */}
-    
-              <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
-                open={open}
-                onClose={handleClose}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                  timeout: 500,
-                }}
-              >
-                <Fade in={open}>
-                  <Box sx={style}>
-                    <h1>{props.Nombre}</h1>
-                    <button onClick={() => props.add(props.produ)}>Add</button>
-                    <button onClick={() => props.remove(props.produ)}>Borrar</button>
-                    <button onClick={()=>props.setIsFalse(!props.isFalse)} disabled={props.notImageFalse} >False</button>
-                    {/* <img src={props.iconImage}></img> */}
-                    {props.isFalse===true?(<img src={props.Image}></img>):(<img src={props.ImageF}></img>)}  
-                    <p>Precio: {props.produ.sell} <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img></p>
-                   
-                  </Box>
-                </Fade>
-              </Modal>
-            </div>
-          );
+
+          <Modal
+            show={open}
+            onHide={() => setOpen(false)}
+            dialogClassName="modal-90w"
+            aria-labelledby="example-custom-modal-styling-title"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="example-custom-modal-styling-title">
+                <h1>{props.Nombre}</h1>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              {" "}
+              <ButtonGroup  >
+              <Button onClick={() => props.add(props.produ)} variant="secondary">Add</Button>
+              <Button onClick={() => props.remove(props.produ)} variant="secondary">Borrar</Button>
+              <Button
+                onClick={() => props.setIsFalse(!props.isFalse)}
+                disabled={props.notImageFalse} variant="secondary"              >
+                False
+              </Button>
+              </ButtonGroup>
+              {/* <img src={props.iconImage}></img> */}
+              {props.isFalse === true ? (
+                <div>
+                 <Alert variant="danger"><Alert.Heading>Es una obra falsa</Alert.Heading><img src={props.ImageF}></img> </Alert>
+                
+                </div>
+              ) : (
+                <img src={props.Image}></img>
+              )}
+              <p>
+                Precio: {props.produ.sell}{" "}
+                <img src="https://i.postimg.cc/VLMPV76t/bells.png"></img>
+              </p>
+            </Modal.Body>
+          </Modal>
+        </div>
+      );
     default:
       break;
   }

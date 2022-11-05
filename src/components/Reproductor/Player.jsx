@@ -80,7 +80,7 @@ function Player(props) {
       ></audio>
 
       {/* {/* details */}
-
+      <div className="PlayerControl">
       <PlayerDetails song={props.songs[props.currentSongIndex]}></PlayerDetails>
       {/* controls */}
       <Controls
@@ -91,6 +91,7 @@ function Player(props) {
         isRepeat={isRepeat}
         setIsRepeat={setIsRepeat}
       ></Controls>
+      </div>
       <NextList
         nextSong={props.songs}
         indice={props.currentSongIndex}

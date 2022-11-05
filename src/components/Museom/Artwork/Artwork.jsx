@@ -33,7 +33,7 @@ export default function Artwork() {
 
   const trueCo = (p) => {
     let find = Card.find((item) => item.name === p.name);
-    let o = find !== undefined ? true : false;
+    let checked = find !== undefined ? true : false;
     let ImageFalse = ArtworkF.find((item) => item.name === p.name);
     let paint=ImageFalse!==undefined?ImageFalse.highResTexture:p.highResTexture;
     let escult=ImageFalse!==undefined?ImageFalse.image:p.image;
@@ -49,7 +49,7 @@ export default function Artwork() {
         add={addToCArt}
         remove={removeToCart}
         produ={p}
-        checked={o}
+        checked={checked}
         type={"Artwork"}
         Image={p.highResTexture==null?p.image:p.highResTexture}
         ImageF={paint==null?escult:paint}

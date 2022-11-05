@@ -1,15 +1,90 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&amp;display=swap);
-.lista{
-  background-color: red;
+ .rest, .DetallesNpc{
+  animation: fondo 100s infinite linear;
+  background-image: url("https://i.postimg.cc/433dF0gz/NSwitch-Animal-Crossing-New-Horizons-calender-bg.jpg");
 }
+
 .cardListisNpc{
   display: flex;
   flex-direction: row;
-  padding: 2%;
-}
+  flex-wrap: wrap;
+  margin: 2%;
+   gap: 2%;
+   justify-content: center;
+   padding: 2%;
+   margin-top: 0;
+  }
 .cardNPC{
-  border: 1px solid black;
+  background-color: rgba(222, 184, 135, 0.322);
+  margin-top: 5%;
+  display: flex;
+  padding: 2%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-radius: 15%;
+  
+  box-shadow: 0px 10px 13px -7px #030914;}
+.cardNPC a{
+  text-decoration: none;
+  display: block;
+  color: rgb(80, 80, 80);
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  align-items: center;
+}
+ #dropdown-basic{
+  margin: 0;
+}
+table{
+  width: 100%;
+}
+th,td{
   width: 10%;
-  height: 10%;
-  background-color: azure;
+}
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  
+}
+th, td {
+  background-color:burlywood;
+}
+td>img{
+  width: 50%;
+}
+caption {
+  display: table-caption;
+  text-align: center;
+}
+caption > button{
+border-radius: 10%;
+}
+.card{
+  width: 20rem;
+
+}
+.card-img{
+  
+}
+.card-header{
+  background-color: rgb(243 243 243 / 47%);
+  border-color: transparent;
+}
+.CardDetails{
+  display: flex;
+  justify-content: center;
+  font-family: 'Nunito';
+  font-size: 1.5em;
+  font-weight: bold;
+  background-image: url("https://i.postimg.cc/433dF0gz/NSwitch-Animal-Crossing-New-Horizons-calender-bg.jpg");
+}
+@keyframes fondo   {
+  from {
+    background-position: center left;
+  }
+  to {
+    background-position: center right;
+  }
 }

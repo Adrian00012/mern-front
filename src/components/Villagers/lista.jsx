@@ -10,7 +10,7 @@ const Lista=(props)=>{
       return (
         <div className="cardListis">
           {specie.map((p) => (
-            <div className="card">
+            <div className="cardV">
               <Link to={`/detallesVillagers/${p._id}`}>
                 <img src={p.iconImage}></img>
                 <p>{p.translations.eUes}</p>
@@ -23,7 +23,7 @@ const Lista=(props)=>{
       return (
         <div className="cardListis">
           {props.Villagers.map((p) => (
-            <div className="card">
+            <div className="cardV">
               <Link to={`/detallesVillagers/${p._id}`}>
                 <img src={p.iconImage}></img>
                 <p>{p.translations.eUes}</p>
@@ -34,12 +34,9 @@ const Lista=(props)=>{
     }}
 
   return (
-    <div className="lista">
-      lista
-      {/* <Link to={`/Villagers/${species}`} >A</Link> */}
+    <div className="listaV">
       {ver()}
     </div>
   );
 }
-
 export default memo(Lista);

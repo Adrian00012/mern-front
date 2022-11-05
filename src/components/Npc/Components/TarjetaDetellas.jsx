@@ -3,12 +3,12 @@ import React from 'react'
 import "./styles.css";
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-const TarjetaDetalles = (props)=>{
+const TarjetaDetallesNpc = (props)=>{
   let gender=props.gender!="Male"?"chica":("chico")
     return (
-      <div className='CardDetailsV'>
+      <div className='CardDetails'>
       <Card>
-        <Card.Img alt="Card image" src={props.photo} />
+        <Card.Img alt="Card image" src={props.photo===null?props.iconImage:props.photo} />
         <Card.ImgOverlay><Card.Header>{props.Nombre}</Card.Header></Card.ImgOverlay>
       
       
@@ -17,15 +17,7 @@ const TarjetaDetalles = (props)=>{
         <ListGroup variant="flush">
         <ListGroup.Item>Cumpleaños: {props.FN}</ListGroup.Item>
         <ListGroup.Item>Gender {gender}</ListGroup.Item>
-        <ListGroup.Item>Hobby: {props.hobby}</ListGroup.Item>
-        <ListGroup.Item>Personalidad {props.personality}</ListGroup.Item>
-        <ListGroup.Item>color: {props.colors.map((element) =><span style={{backgroundColor:`${element.toLowerCase()}`, color:`${element.toLowerCase()}`}}>{element} </span>)}</ListGroup.Item>
-        <ListGroup.Item>styles: {props.styles.map((element) => 
-          <span>{element} </span>
-        )}</ListGroup.Item>
         </ListGroup>
-        
-       
       </Card.Body>
     </Card>
     </div>
@@ -50,4 +42,4 @@ const TarjetaDetalles = (props)=>{
     );
   
 }
-export default TarjetaDetalles;
+export default TarjetaDetallesNpc;
