@@ -14,10 +14,10 @@ function Carrousel() {
          
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="https://i.postimg.cc/qgfM0TvM/ac-new-horizons-hhp-artwork-01-1920x1080-1.jpg"
+          src="https://i.postimg.cc/NMy8sPBp/ac-new-horizons-hhp-artwork-01-1920x1080-1.jpg"
           alt="Second slide"
         />
         <Carousel.Caption>
@@ -27,7 +27,7 @@ function Carrousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://i.postimg.cc/3JrtCv81/Hr-Sdf-Srw-1.jpg"
+          src="https://i.postimg.cc/8k9K6MY7/Hr-Sdf-Srw-1.jpg"
           alt="Third slide"
         />
         <Carousel.Caption>
