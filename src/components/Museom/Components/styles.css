@@ -52,7 +52,7 @@
 .modal-body{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;

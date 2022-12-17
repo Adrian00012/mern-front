@@ -22,6 +22,7 @@ function Controls(props) {
         </button>
         <button onClick={() => props.SkipSong(true)}>
           <i class="bi bi-caret-right"></i>
+          
         </button>
         <button>
           <i
